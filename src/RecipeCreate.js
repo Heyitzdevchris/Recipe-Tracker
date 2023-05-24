@@ -31,37 +31,21 @@ function RecipeCreate({ addRecipe }) {
       <table>
         <tbody>
           <tr>
-            <td>Name:</td>
             <td>
-              <input name="name" value={recipe.name} onChange={handleChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Cuisine:</td>
+              <input name="name" value={recipe.name} onChange={handleChange} placeholder="name"/>
+            </td>          
             <td>
-              <input name="cuisine" value={recipe.cuisine} onChange={handleChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Photo:</td>
+              <input name="cuisine" value={recipe.cuisine} onChange={handleChange} placeholder="cuisine" />
+            </td>          
             <td>
-              <input name="photo" value={recipe.photo} onChange={handleChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Ingredients:</td>
+              <input name="photo" value={recipe.photo} onChange={handleChange} placeholder="photo"/>
+            </td>         
             <td>
-              <textarea name="ingredients" value={recipe.ingredients} onChange={handleChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Preparation:</td>
+              <textarea name="ingredients" value={recipe.ingredients} onChange={handleChange} placeholder="ingredients"/>
+            </td>          
             <td>
-              <textarea name="preparation" value={recipe.preparation} onChange={handleChange} />
-            </td>
-          </tr>
-          <tr>
-            <td></td>
+              <textarea name="preparation" value={recipe.preparation} onChange={handleChange} placeholder="preparation"/>
+            </td>         
             <td>
               <button type="submit">Create</button>
             </td>

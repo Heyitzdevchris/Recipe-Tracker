@@ -35,6 +35,10 @@ th {
   padding: 10px;
 }
 
+input {
+  max-width: 100%;
+}
+
 td {
   letter-spacing: 1px;
   overflow-x:hidden;
