@@ -10,7 +10,7 @@ function RecipeItem({ recipe, deleteRecipe }) {
       <td>{recipe.name}</td>
       <td>{recipe.cuisine}</td>
       <td>
-        <img src={recipe.photo} alt={recipe.name} width="100" height="100" />
+        <img src={recipe.photo} alt={recipe.name} className="scale-down" />
       </td>
       <td className="content-td">
         <p>{recipe.ingredients}</p>
