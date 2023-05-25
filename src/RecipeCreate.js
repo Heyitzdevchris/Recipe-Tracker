@@ -16,6 +16,19 @@ function RecipeCreate({ addRecipe }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Check if any required fields are empty
+    if (
+      recipe.name.trim() === "" ||
+      recipe.cuisine.trim() === "" ||
+      recipe.photo.trim() === "" ||
+      recipe.ingredients.trim() === "" ||
+      recipe.preparation.trim() === ""
+    ) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
     addRecipe(recipe);
     setRecipe({
       name: "",
@@ -32,20 +45,45 @@ function RecipeCreate({ addRecipe }) {
         <tbody>
           <tr>
             <td>
-              <input name="name" value={recipe.name} onChange={handleChange} placeholder="name"/>
-            </td>          
+              <input
+                name="name"
+                value={recipe.name}
+                onChange={handleChange}
+                placeholder="name"
+              />
+            </td>
             <td>
-              <input name="cuisine" value={recipe.cuisine} onChange={handleChange} placeholder="cuisine" />
-            </td>          
+              <input
+                name="cuisine"
+                value={recipe.cuisine}
+                onChange={handleChange}
+                placeholder="cuisine"
+              />
+            </td>
             <td>
-              <input name="photo" value={recipe.photo} onChange={handleChange} placeholder="photo"/>
-            </td>         
+              <input
+                name="photo"
+                value={recipe.photo}
+                onChange={handleChange}
+                placeholder="photo"
+              />
+            </td>
             <td>
-              <textarea name="ingredients" value={recipe.ingredients} onChange={handleChange} placeholder="ingredients"/>
-            </td>          
+              <textarea
+                name="ingredients"
+                value={recipe.ingredients}
+                onChange={handleChange}
+                placeholder="ingredients"
+              />
+            </td>
             <td>
-              <textarea name="preparation" value={recipe.preparation} onChange={handleChange} placeholder="preparation"/>
-            </td>         
+              <textarea
+                name="preparation"
+                value={recipe.preparation}
+                onChange={handleChange}
+                placeholder="preparation"
+              />
+            </td>
             <td>
               <button type="submit">Create</button>
             </td>
